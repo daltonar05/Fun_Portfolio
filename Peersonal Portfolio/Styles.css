@@ -73,34 +73,85 @@ nav ul li a:hover::after{
     color: #FF8331;
 }
 /* about */
-#about{
-    padding: 40px 0px;
+/* About Section */
+#about {
+    padding: 50px 0;
     color: #ababab;
-} 
-.row{
+    background: #101622;
+}
+
+.row {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap
+    align-items: center; /* Aligns content vertically */
+    flex-wrap: wrap;
+    gap: 20px; /* Adds spacing between items in smaller viewports */
 }
-.about-col-1{
-    flex-basis: 35%;
 
+.about-col-1 {
+    flex-basis: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.about-nishi{
-    width: 300px;
-    height:450px;
-    border-radius: 20px ;
+
+.about-nishi {
+    width: 80%;
+    height: 40%;
+    height: auto;
+    border-radius: 20px;
 }
-.about-col-2{
-    flex-basis: 60%;
+
+.about-col-2 {
+    flex-basis: 75%;
+    text-align: left;
 }
-.about-col-2 h1{
-    font-size: 60px;
+
+.about-col-2 h1 {
+    font-size: 48px;
     font-weight: 600;
     color: #fff;
-    position: relative;
-    left: -240px;
+    margin-bottom: 20px;
 }
-.about-col-2 p{
-    font-size:50px;
+
+.about-col-2 p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.tab-titles {
+    display: flex;
+    gap: 20px;
+}
+
+.tab-links {
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    color: #fff;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #FF8331;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+.tab-links:hover::after{
+    width: 100%;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-links.active-link:hover::after {
+    width: 100%;
 }

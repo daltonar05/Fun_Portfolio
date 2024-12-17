@@ -27,19 +27,40 @@
         </div>
     </div>
 <!-- about -->
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="Images/nishinoya.png" class="about-nishi">
-                </div>
-                <div class="about-col-2">
-                    <h1>About me</h1>
-                    <p>I am a Mechanical Engineer with a passion for design, prototyping, and innovation. As the captain of an award-winning Mars rover team, I have led multidisciplinary projects, achieving success in global competitions. With professional experience in automotive product design and additive manufacturing, I thrive on solving complex challenges and driving impactful solutions.</p>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images/nishinoya.png" class="about-nishi">
+            </div>
+            <div class="about-col-2">
+                <h1>About Me</h1>
+                <p>I am a Mechanical Engineer with a passion for design, prototyping, and innovation. <br>
+                   Leading multidisciplinary projects, achieving success in global competitions. <br>
+                   With professional experience in automotive product design and additive manufacturing, <br>
+                   I thrive on solving complex challenges and driving impactful solutions.</p>
+
+                   <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="activateTab(this)">Experience</p>
+                    <p class="tab-links" onclick="activateTab(this)">Education</p>
+                    <p class="tab-links" onclick="activateTab(this)">Skills</p>
                 </div>
                 
             </div>
         </div>
     </div>
+</div>
+<script>
+    function activateTab(element) {
+        // Remove the 'active-link' class from all tab links
+        const tabs = document.querySelectorAll('.tab-links');
+        tabs.forEach(tab => tab.classList.remove('active-link'));
+
+        // Add the 'active-link' class to the clicked tab
+        element.classList.add('active-link');
+    }
+</script>
+
+
 </body>
 </html
